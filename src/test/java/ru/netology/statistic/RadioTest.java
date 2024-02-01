@@ -20,7 +20,7 @@ class RadioTest {
 
     @Test
     public void VolumeMax() {
-        radio.setCurrentVolume(12);
+        radio.setCurrentVolume(120);
 
         int expected = 0;
         int actual = radio.getCurrentVolume();
@@ -29,7 +29,7 @@ class RadioTest {
     }
 
     @Test
-    public void VolumeMin() {   
+    public void VolumeMin() {
         radio.setCurrentVolume(-2);
 
         int expected = 0;
