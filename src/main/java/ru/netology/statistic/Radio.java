@@ -24,19 +24,19 @@ public class Radio {
         currentRadioStation = newCurrentRadioStation;
     }
 
-    public void setCurrentVolume(int newCurrentVolume) {
-        if (newCurrentVolume > 100) {
+    public void setCurrentVolume(int CurrentVolume) {
+        if (CurrentVolume > 10) {
             return;
         }
-        if (newCurrentVolume < 0) {
+        if (CurrentVolume < 0) {
             return;
         }
-        currentVolume = newCurrentVolume;
+        this.currentVolume = CurrentVolume;
     }
 
 
     public void volumeUp() {                // увеличение громкости на 1
-        if (currentVolume < 100) {
+        if (currentVolume < 10) {
             currentVolume = currentVolume + 1;
         }
     }
