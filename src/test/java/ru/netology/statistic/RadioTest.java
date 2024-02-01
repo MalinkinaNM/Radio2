@@ -88,6 +88,7 @@ class RadioTest {
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void nextStationAfterMax() {     //следущая станция после Max
         radio.setCurrentRadioStation(9);
@@ -97,6 +98,7 @@ class RadioTest {
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void prevStation() {     //предъидущая станция
         radio.setCurrentRadioStation(5);
@@ -106,6 +108,7 @@ class RadioTest {
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void prevStationAfterMin() {     //предъидущая станция после Min
         radio.setCurrentRadioStation(0);
