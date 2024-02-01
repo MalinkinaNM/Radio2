@@ -30,13 +30,14 @@ class RadioTest {
 
     @Test
     public void VolumeMin() {   //прибавить громкость
-        radio.setCurrentVolume(0);
+        radio.setCurrentVolume(-2);
 
         int expected = 0;
         int actual = radio.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
     }
+    
     @Test
     public void increaseVolume() {   //прибавить громкость
         radio.setCurrentVolume(5);
