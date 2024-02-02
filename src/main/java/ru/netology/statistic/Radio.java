@@ -6,6 +6,18 @@ public class Radio {
     private int currentVolume;          // текущая громкость
     private int currentRadioStation;        // текущая радиостанция
 
+    private int maxStation;
+
+    public Radio() {
+        this.maxStation = 9;
+
+    }
+
+    public Radio(int stationsCount) {
+        this.maxStation = stationsCount - 1;
+
+    }
+
     public int getCurrentVolume() {
         return currentVolume;
     }
