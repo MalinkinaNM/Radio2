@@ -22,7 +22,7 @@ public class Radio {
     }
 
     public int getCurrentRadioStation() {
-        return maxStation;
+        return currentRadioStation;
     }
 
     public void setCurrentRadioStation(int CurrentRadioStation) {  // установка радиостанции

@@ -150,18 +150,7 @@ class RadioTest {
     }
 
     @Test
-    public void test() {
-        Radio radio = new Radio(20);
-        radio.setCurrentRadioStation(8);
-        radio.next();
-
-        int expected = 9;
-        int actual = radio.getCurrentRadioStation();
-
-        Assertions.assertEquals(expected, actual);
-    }
-    @Test
-    public void test2() {
+    public void test1() {
         Radio radio = new Radio(20);
         radio.setCurrentRadioStation(15);
 
@@ -170,4 +159,18 @@ class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    public void test2() {
+        Radio radio = new Radio(20);
+        radio.setCurrentRadioStation(8);
+
+        radio.next();
+
+        int expected = 9;
+        int actual = radio.getCurrentRadioStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
 }
