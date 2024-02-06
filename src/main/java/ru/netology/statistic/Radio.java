@@ -10,7 +10,6 @@ public class Radio {
 
     public Radio() {
         this.maxStation = 9;
-
     }
 
     public Radio(int stationsCount) {
@@ -23,17 +22,17 @@ public class Radio {
     }
 
     public int getCurrentRadioStation() {
-        return currentRadioStation;
+        return maxStation;
     }
 
-    public void setCurrentRadioStation(int newCurrentRadioStation) {  // установка радиостанции
-        if (newCurrentRadioStation > 9) {
+    public void setCurrentRadioStation(int CurrentRadioStation) {  // установка радиостанции
+        if (CurrentRadioStation < 0) {
             return;
         }
-        if (newCurrentRadioStation < 0) {
+        if (CurrentRadioStation > maxStation) {
             return;
         }
-        currentRadioStation = newCurrentRadioStation;
+        this.currentRadioStation = CurrentRadioStation;
     }
 
     public void setCurrentVolume(int CurrentVolume) {
@@ -61,7 +60,7 @@ public class Radio {
 
 
     public void next() {                // следущая радиостанция
-        if (currentRadioStation < 9) {
+        if (currentRadioStation < maxStation) {
             currentRadioStation = currentRadioStation + 1;
         } else {
             currentRadioStation = 0;
@@ -72,7 +71,7 @@ public class Radio {
         if (currentRadioStation > 0) {
             currentRadioStation = currentRadioStation - 1;
         } else {
-            currentRadioStation = 9;
+            currentRadioStation = maxStation;
         }
     }
 

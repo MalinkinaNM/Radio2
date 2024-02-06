@@ -160,7 +160,6 @@ class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
-
     @Test
     public void test2() {
         Radio radio = new Radio(20);
